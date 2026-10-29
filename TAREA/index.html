@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App de Notas UX</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="portada">
+      <img src="img/banner.png" alt="Banner App Notas JuniEmm" />
+    </header>
+
+    <main class="tarjeta">
+      <h1>Mis Notas</h1>
+      <p class="ayuda">
+        Organiza tus tareas diarias de forma rápida y sencilla.
+      </p>
+
+      <form id="formulario-notas" novalidate>
+        <fieldset>
+          <legend>Nueva Nota</legend>
+
+          <label for="titulo-nota">Título de la nota</label>
+          <input
+            type="text"
+            id="titulo-nota"
+            name="titulo"
+            required
+            placeholder="Ej. Comprar materiales"
+          />
+
+          <label for="contenido-nota">Detalle</label>
+          <textarea
+            id="contenido-nota"
+            name="contenido"
+            required
+            placeholder="Escribe el contenido aquí..."
+          ></textarea>
+        </fieldset>
+
+        <div id="mensaje" class="mensaje" aria-live="polite"></div>
+
+        <div class="acciones">
+          <button type="submit" class="boton-principal">Agregar Nota</button>
+          <button type="reset" class="boton-secundario">Limpiar</button>
+        </div>
+      </form>
+
+      <section class="lista-notas">
+        <h2>Notas guardadas</h2>
+        <div id="contenedor-notas"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
